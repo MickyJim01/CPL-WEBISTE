@@ -1,0 +1,239 @@
+/*
+--colour Pallette
+
+#5bab71	Success
+#d99b39	Warning
+#f44336	Danger
+
+--text: #e3ecf8;
+--background: #07121f;
+--primary: #86afe2;
+--secondary: #7c1e3f;
+--accent: #d57c51;
+
+
+*/
+
+/* General Styles */
+*{
+    margin: 0px;
+    color: #e3ecf8;
+    font-family: Bahnschrift, Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    background-color: #07121f;
+
+}   
+
+p {
+    font-size: 14pt;
+
+}
+
+/* Custom Element Tags */
+ref {
+    align-self: center;
+    padding: 3px;
+    font-size: smaller;
+    font-style: italic;
+}
+
+quote {
+    font-size: larger;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/* Classes for content */
+.card {
+    background-color: #7c1e3f;
+    padding: 10px;
+    border-radius: 15px; 
+    box-shadow: 10px 10px 10px #86afe2ab;
+    margin: 7px;
+    height: fit-content;
+}
+
+
+.callout {
+    background-color: #86afe2d3;
+    color: #07121f;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    width: fit-content;
+}
+
+/* Classes for Basic Structre */
+
+.container { /*contains the whole page*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.horizontal1 { /*contains the nav and main classes
+                and takes up the screen.
+                makes the nav bar and main content sit
+                side by side*/
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+}
+.horizontal2 { /*for content within main content,
+                makes it sit side by side*/
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-around;
+}
+
+/* For Nav Bar section block*/
+.nav {
+    background-color: #172638;
+    box-shadow: 10px 1px #1726388c;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 2px;
+    padding-top: 30px;
+    overflow: auto;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+    overflow: visible;
+}
+
+nav > h1 h2 h3 h4 {
+    color: #e3ecf8;
+    background-color: #7c1e3f;
+    padding: 4px 30px 4px 30px;
+    border-radius: 15px;
+}
+nav > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    padding: 1px;
+    margin: 5px;
+    & li {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        padding: 0px;
+        text-align: center;
+      /*
+        animation: bouncy 5s infinite linear;
+        position: relative;
+      */
+    }
+}
+
+/* 
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.99em}
+    46%{top:0em}
+    48%{top:-0.1em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+ */
+
+ /* The main content section block */
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    flex: 4;
+
+
+}
+
+    /* The Header within the main contnent block
+    sticks to the top of the page - always visible */
+    .header {
+        flex-direction: row;
+        padding: 2px;
+        margin: 2px;
+        position: sticky; top: 0;
+        text-align: center;
+        background-color: #d57c51;
+        border-radius: 19px;
+
+        & h1 {
+            color: #07121f;
+            margin: 7px;
+            font-size: 32pt;
+        }
+
+    }
+
+        /* Content/article itself */
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 2px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* footer stays to bottom of page */
+    .footer {
+        padding: 2px;
+        margin-top: auto;
+        margin-left: 15px;
+        padding-left: 15px;
+        background-color: #7c1e3f6c;
+        border-top: 2px solid #7c1e3f;
+    }
+
+
+
+                /* ID's */
+/* Styles Page links */
+#pagelink a:link, a:visited {
+    color: #07121f;
+    background-color: #86afe2;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 0px;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+#pagelink a:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px #07121f;
+    transform: scale(1.1);
+    transition: 0.1s;
+    margin-left: 30px;
+}
+
+#pagelink a:active {
+    background-color: #7c1e3f;
+    color: #e3ecf8;
+
+}
+
+/* Styles headings within main content block */
+#conthead {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Styles text with dark id and also <li>
+within a dark class <ul> */
+#dark, .dark > li {
+    color: #07121f;
+}

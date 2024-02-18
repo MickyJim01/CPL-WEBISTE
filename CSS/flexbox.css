@@ -1,0 +1,50 @@
+
+.page {
+    background-color: #49597A;
+    display: flex;
+}
+.navbar {
+    display: flex;
+    flex: 2;
+    border: 2px solid black;
+    flex-direction: column;
+    height: 800px
+}
+
+.navbar > div {
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.heading {
+    border: 2px solid yellow;
+    flex: 7;
+    height: 120px;
+}
+
+.main {
+    border: 2px solid pink;
+    flex: 1;
+}
+
+
+/* Styles Page Links */
+#pagelink a:link, a:visited {
+    background-color: #F5F5F5;
+    color: #49597A;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 7px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#pagelink a:hover, a:active {
+    background-color: blue;
+    cursor: pointer;
+    transition: 0.3s;
+}
